@@ -1,1 +1,1 @@
-I am a php student
+This is the About page.

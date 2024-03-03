@@ -24,8 +24,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function demo() {
-		echo "I am who I am";
-		// $this->load->view('welcome_message');
-		// $this -> load -> view('about');
+		// echo "I am who I am";
+		$this -> load -> view('about');
 	}
 }

@@ -15,4 +15,15 @@ class PageController extends CI_Controller {
 
         $this->load->view('blogview');
     }
+
+    public function demo(){
+        // $data['title'] = "Hello, I am Purna Peramune!";
+        $this -> load -> model('StudentModel');
+        $title = $this -> StudentModel -> demo();
+
+        $data['title'] = $title;
+        $data['body'] = "This is the body of the page!";
+        $data['footer'] = "This is the footer of the page!";
+        $this -> load -> view('demopage', $data);
+    }
 }

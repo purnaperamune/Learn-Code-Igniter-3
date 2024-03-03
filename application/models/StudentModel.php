@@ -19,4 +19,9 @@ class StudentModel extends CI_Model{
         }
         
     }
+
+    public function demo(){
+        $title = "Hello, I am Purna";
+        return $title;
+    }
 }

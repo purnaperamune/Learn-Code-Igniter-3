@@ -5,4 +5,12 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['abouts'] = 'Welcome/demo/';
+
+/**  Instead of this: http://localhost:8080/learnCI3/index.php/PageController/aboutus, 
+ * we can use the below routes to make it more clean.
+*/
+$route['home'] = 'PageController/index';
+$route['abouts'] = 'PageController/aboutus';
+
+
+$route['blog/(:any)'] = 'PageController/blog/$1';

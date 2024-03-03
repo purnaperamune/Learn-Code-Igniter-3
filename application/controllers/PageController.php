@@ -9,4 +9,10 @@ class PageController extends CI_Controller {
     public function aboutus(){
         echo "I am 'About Us' page";
     }
+
+    public function blog($blog_url = 'null'){
+        echo "$blog_url";
+
+        $this->load->view('blogview');
+    }
 }

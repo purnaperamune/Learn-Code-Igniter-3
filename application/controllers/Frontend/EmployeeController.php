@@ -14,4 +14,31 @@ class EmployeeController extends CI_Controller{
         $this -> load -> view('frontend/create');
         $this -> load -> view('template/footer');
     }
+
+    public function store(){
+        $this -> form_validation -> set_rules('first_name', "First Name", "required");
+        $this -> form_validation -> set_rules('last_name', "Last Name", "required");
+        $this -> form_validation -> set_rules('phone', "Phone", "required");
+        $this -> form_validation -> set_rules('email', "Email", "required");
+
+        if($this -> form_validation -> run()){
+            $data = [
+                'first_name' => $this -> input -> post('first_name'),
+                'last_name' => $this -> input -> post('last_name'),
+                'phone' => $this -> input -> post('phone'),
+                'email' => $this -> input -> post('email')
+            ];
+
+            $this -> load -> model('EmployeeModel', 'emp');
+            $this -> emp -> insertEmployee($data);
+            redirect((base_url('employee')));
+        }
+        else {
+            $this -> create();
+            // redirect((base_url('employee/add')));
+        }
+
+
+        // echo var_dump($data);
+    }
 }

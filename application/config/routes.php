@@ -14,3 +14,7 @@ $route['abouts'] = 'PageController/aboutus';
 
 
 $route['blog/(:any)'] = 'PageController/blog/$1';
+
+// Employee Routes
+$route['employee'] = 'Frontend/EmployeeController/index';
+$route['employee/add'] = 'Frontend/EmployeeController/create';

@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /LearnCI3  
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets|images|css|docs|js|system)
+RewriteRule ^(.*)$ /LearnCI3/index.php?/$1 [L]

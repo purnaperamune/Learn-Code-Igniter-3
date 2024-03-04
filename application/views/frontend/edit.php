@@ -9,7 +9,7 @@
                         </h5>
                     </div>
                     <div class="card-body">
-                        <form action="<?php echo base_url('employee/store'); ?>" method="post">
+                        <form action="<?php echo base_url('employee/update/'.$employee -> id); ?>" method="post">
                             <div class="form-group">
                                 <label for="">First Name</label>
                                 <input type="text" name="first_name" value="<?= $employee -> first_name?>" class="form-control">

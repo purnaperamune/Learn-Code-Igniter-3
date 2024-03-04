@@ -19,5 +19,9 @@ class EmployeeModel extends CI_Model{
     public function insertEmployee($data){
         $this -> db -> insert('employee', $data);
     }
+
+    public function deleteEmployee($id){
+        $this -> db -> delete('employee', ['id' => $id]);
+    }
     
 }

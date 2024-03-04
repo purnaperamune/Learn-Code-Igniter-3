@@ -28,10 +28,10 @@
                                     <td><?php echo $row -> phone ?></td>
                                     <td><?php echo $row -> email ?></td>
                                     <td>
-                                        <a href="<?php echo base_url('employee/edit/'.$row -> id) ?>"class="btn btn-success btm-sm">Edit</a>
+                                        <a href="<?php echo base_url('employee/edit/'.$row -> id) ?>" class="btn btn-success btm-sm">Edit</a>
                                     </td>
                                     <td>
-                                        <a href=""class="btn btn-danger btm-sm">Delete</a>
+                                        <a href="<?php echo base_url('employee/delete/'.$row -> id) ?>" class="btn btn-danger btm-sm">Delete</a>
                                     </td>
                                 </tr>
                                 <?php endforeach ?>

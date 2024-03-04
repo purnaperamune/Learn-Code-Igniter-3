@@ -21,3 +21,4 @@ $route['employee/add'] = 'Frontend/EmployeeController/create';
 $route['employee/store'] = 'Frontend/EmployeeController/store';
 $route['employee/edit/(:any)'] = 'Frontend/EmployeeController/edit/$1';
 $route['employee/update/(:any)'] = 'Frontend/EmployeeController/update/$1';
+$route['employee/delete/(:any)'] = 'Frontend/EmployeeController/delete/$1';
